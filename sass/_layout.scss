@@ -50,11 +50,14 @@ html {
   box-shadow: 0 0 7px #555;
 }
 
-.main-header {
+.primary-header {
   display: flex;
   text-transform: lowercase;
-  // margin: 20px 0;  // this is causing issues...
-  // -webkit-font-smoothing: antialiased;
+
+  @include narrower-than(750px) {
+    display: block;
+    text-align: center;
+  }
 
   .logo {
     font-family: 'Volkhov';
@@ -65,9 +68,10 @@ html {
 
 }
 
-.main-nav {
+
+
+.primary-nav {
   width: 100%;
-  
 
   ul {
     display: flex;
@@ -152,13 +156,15 @@ main {
   }
 }
 
-.main-footer {
+.primary-footer {
   
   ul {
     display: flex;
     list-style-type: none;
     justify-content: flex-end;
     font-size: 1.5em;
+    margin-left: 10px;
+    margin-right: 10px;
 
     li {
 
