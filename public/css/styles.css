@@ -27,7 +27,7 @@ html {
   Layout
 *****************************************/
 .page {
-  height: 100vh;
+  height: 100%;
   background-color: #afe0f1; }
   .page .container {
     max-width: 1000px;
@@ -107,6 +107,21 @@ main {
         color: #1eb7ea; }
     main .details .detail:last-child {
       border-bottom: 1px solid #d3eef7; }
+
+.main-footer ul {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  font-size: 1.5em; }
+  .main-footer ul li a {
+    text-decoration: none;
+    margin: 0 5px; }
+  .main-footer ul li a:hover {
+    color: #0da4d4; }
 
 /****************************************
   Components
