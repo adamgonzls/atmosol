@@ -41,15 +41,37 @@ html {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  text-transform: lowercase; }
+  text-transform: lowercase;
+  margin-bottom: 30px; }
   @media screen and (max-width: 750px) {
     .primary-header {
       display: block;
       text-align: center; } }
+  @media screen and (max-width: 480px) {
+    .primary-header {
+      margin-bottom: 0px; } }
   .primary-header .logo {
     font-family: 'Volkhov';
     color: #000;
     font-size: 3.5em; }
+    .primary-header .logo a {
+      text-decoration: none; }
+    @media screen and (max-width: 480px) {
+      .primary-header .logo {
+        font-size: 2.0em; } }
+
+@media screen and (max-width: 480px) {
+  .hamburger {
+    cursor: pointer;
+    padding: 15px;
+    display: block;
+    background: linear-gradient(to bottom, #f0f0f0 0%, #d9d9d9 100%); }
+    .hamburger .line {
+      border-bottom: 4px solid #bbb;
+      width: 35px;
+      margin-bottom: 6px; }
+    .hamburger .line:last-child {
+      margin-bottom: 0; } }
 
 .primary-nav {
   width: 100%; }
@@ -62,21 +84,44 @@ html {
     text-align: center;
     font-family: 'Lustria';
     vertical-align: bottom; }
+    @media screen and (max-width: 480px) {
+      .primary-nav ul {
+        background-color: #fff;
+        display: block;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s linear; }
+        .primary-nav ul a {
+          margin-top: 0; }
+        .primary-nav ul a:hover {
+          color: #434343;
+          border-radius: none;
+          background-color: transparent; } }
+  .primary-nav .open {
+    height: 90px; }
   .primary-nav li {
     -webkit-flex: auto;
     -ms-flex: auto;
     flex: auto;
-    list-style-type: none; }
+    list-style-type: none;
+    margin: 0 20px; }
   .primary-nav a {
     color: #434343;
     text-decoration: none;
     display: block;
-    padding: 30px;
-    margin-top: 10px; }
+    padding: 5px;
+    margin-top: 30px; }
+  .primary-nav a:hover {
+    color: #fff;
+    background-color: #0da4dd;
+    border-radius: 0 10px 10px 10px; }
 
 main {
   padding: 30px 40px;
   background-color: #fff; }
+  @media screen and (max-width: 320px) {
+    main {
+      padding: 20px 20px; } }
   main h1 {
     color: #1eb7ea;
     text-transform: lowercase;
@@ -105,6 +150,9 @@ main {
         margin-bottom: 10px; }
       main .details .detail ul {
         list-style-type: none; }
+        @media screen and (max-width: 480px) {
+          main .details .detail ul {
+            padding-left: 15px; } }
       main .details .detail li:before {
         font-size: 1.2em;
         content: "• ";
@@ -123,6 +171,12 @@ main {
   font-size: 1.5em;
   margin-left: 10px;
   margin-right: 10px; }
+  @media screen and (max-width: 480px) {
+    .primary-footer ul {
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      padding-left: 0; } }
   .primary-footer ul li a {
     text-decoration: none;
     margin: 0 5px; }

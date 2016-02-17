@@ -43,7 +43,6 @@ html {
     margin: 0 auto;
     padding: 20px 0;
   }
-
 }
 
 .inner-content {
@@ -53,10 +52,15 @@ html {
 .primary-header {
   display: flex;
   text-transform: lowercase;
+  margin-bottom: 30px;
 
   @include narrower-than(750px) {
     display: block;
     text-align: center;
+  }
+
+  @include narrower-than(480px) {
+    margin-bottom: 0px;
   }
 
   .logo {
@@ -64,10 +68,35 @@ html {
     color: #000;
     font-size: 3.5em;
     
-  }
+    a {
+      text-decoration: none;
+    }
 
+    @include narrower-than(480px) {
+      font-size: 2.0em;
+    }
+  }
 }
 
+
+@include narrower-than(480px) {
+  .hamburger {
+    cursor: pointer;
+    padding: 15px;
+    display: block;
+    background: linear-gradient(to bottom, #f0f0f0 0%, #d9d9d9 100%);
+
+    .line {
+      border-bottom: 4px solid #bbb;
+      width: 35px;
+      margin-bottom: 6px;
+    }
+
+    .line:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
 
 
 .primary-nav {
@@ -80,34 +109,65 @@ html {
     text-align: center;
     font-family: 'Lustria';
     vertical-align: bottom;
+
+    @include narrower-than(480px) {
+      background-color: $white;
+      display: block;
+      height: 0;
+      overflow: hidden;
+      transition: height 0.3s linear;
+      
+      a {
+        margin-top: 0;
+      }
+
+      a:hover {
+        color: $tundora;
+        border-radius: none;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .open {
+    height: 90px;
   }
 
   li {
     flex: auto;
     list-style-type: none;
-
+    margin: 0 20px;
   }
 
   a {
     color: $tundora;
     text-decoration: none;
     display: block;
-    padding: 30px;
-    margin-top: 10px;
+    padding: 5px;
+    margin-top: 30px;
   }
 
+  a:hover {
+    color: $white;
+    background-color: $cerulean;
+    border-radius: 0 10px 10px 10px;
+  }
 }
+
 
 main {
   padding: 30px 40px;
   background-color: $white;
+
+  @include narrower-than(320px) {
+    padding: 20px 20px;
+  }
 
   h1 {
     color: $picton-blue;
     text-transform: lowercase;
     font-size: 2.5em;
     font-family: 'Volkhov';
-    // font-weight: 700;
   }
 
   h2 {
@@ -141,6 +201,10 @@ main {
 
       ul {
         list-style-type: none;
+
+        @include narrower-than(480px) {
+          padding-left: 15px;
+        }
       }
 
       li:before {
@@ -148,13 +212,14 @@ main {
         content: "• ";
         color: $picton-blue;
       }
-
     }
+
     .detail:last-child {
       border-bottom: 1px solid $mint-tulip;
     }
   }
 }
+
 
 .primary-footer {
   
@@ -166,6 +231,11 @@ main {
     margin-left: 10px;
     margin-right: 10px;
 
+    @include narrower-than(480px) {
+      justify-content: center;
+      padding-left: 0;
+    }
+
     li {
 
       a {
@@ -175,12 +245,9 @@ main {
 
       a:hover {
         color: $cerulean;
-      }
-      
+      } 
     }
-
   }
-
 }
 
 
