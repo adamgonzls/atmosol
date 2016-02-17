@@ -11,7 +11,7 @@ gulp.task('sass', function() {
 		browsers: ['last 3 versions'],
 		cascade: false
 	}))
-	.pipe(gulp.dest('./public/css'));
+	.pipe(gulp.dest('./css'));
 });
 
 //watch

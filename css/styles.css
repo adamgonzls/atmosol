@@ -37,19 +37,23 @@ html {
 .inner-content {
   box-shadow: 0 0 7px #555; }
 
-.main-header {
+.primary-header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   text-transform: lowercase; }
-  .main-header .logo {
+  @media screen and (max-width: 750px) {
+    .primary-header {
+      display: block;
+      text-align: center; } }
+  .primary-header .logo {
     font-family: 'Volkhov';
     color: #000;
     font-size: 3.5em; }
 
-.main-nav {
+.primary-nav {
   width: 100%; }
-  .main-nav ul {
+  .primary-nav ul {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -58,12 +62,12 @@ html {
     text-align: center;
     font-family: 'Lustria';
     vertical-align: bottom; }
-  .main-nav li {
+  .primary-nav li {
     -webkit-flex: auto;
     -ms-flex: auto;
     flex: auto;
     list-style-type: none; }
-  .main-nav a {
+  .primary-nav a {
     color: #434343;
     text-decoration: none;
     display: block;
@@ -108,7 +112,7 @@ main {
     main .details .detail:last-child {
       border-bottom: 1px solid #d3eef7; }
 
-.main-footer ul {
+.primary-footer ul {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -116,12 +120,14 @@ main {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  font-size: 1.5em; }
-  .main-footer ul li a {
+  font-size: 1.5em;
+  margin-left: 10px;
+  margin-right: 10px; }
+  .primary-footer ul li a {
     text-decoration: none;
     margin: 0 5px; }
-  .main-footer ul li a:hover {
-    color: #0da4d4; }
+  .primary-footer ul li a:hover {
+    color: #0da4dd; }
 
 /****************************************
   Components
